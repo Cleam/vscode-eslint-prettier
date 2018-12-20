@@ -30,7 +30,7 @@ VsCode 前端代码配置规范
 
 `code -> 首选项 -> 设置 -> 用户设置` 添加以下配置项
 
-```json
+```js
 {
   // 使用2个空格代替一个tab操作（必选）
   "editor.tabSize": 2,
@@ -343,7 +343,7 @@ module.exports = {
 
 - 如果是使用 [Vue CLI 3](https://cli.vuejs.org/) 创建的项目，修改`package.json`中的配置项`eslintConfig`
 
-```json
+```js
 {
   // ...
   "eslintConfig": {
@@ -432,7 +432,7 @@ module.exports = {
 
 3. 修改`package.json`中的配置项`eslintConfig`
 
-```json
+```js
 {
   // ...
   "eslintConfig": {
@@ -466,7 +466,7 @@ npm i -D husky lint-staged
 
 修改`package.json`配置
 
-```json
+```js
 {
   // ...,
   "husky": {
