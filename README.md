@@ -32,9 +32,9 @@ VsCode 前端代码配置规范
 
 ```json
 {
-  // 使用2个空格代替一个tab操作（必选）
+  // 使用2个空格代替一个tab操作（必选）
   "editor.tabSize": 2,
-  // js中使用单引号（必选）
+  // js中使用单引号（必选）
   "prettier.singleQuote": true,
   // 配置打印宽度为120，超过120代码自动换行。（必选）
   "prettier.printWidth": 120,
