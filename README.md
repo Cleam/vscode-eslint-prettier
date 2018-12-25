@@ -321,6 +321,20 @@ GitHub.sublime-settings
 
 ### vue 项目配置
 
+基于大部分人都会针对 vue 项目安装[vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur)插件，为了避免冲突带来的困惑，请在 vscode 工具中添加如下配置：
+
+```json
+"prettier.disableLanguages": [],
+"vetur.format.defaultFormatter.html": "none",
+"vetur.format.defaultFormatter.css": "none",
+"vetur.format.defaultFormatter.postcss": "none",
+"vetur.format.defaultFormatter.scss": "none",
+"vetur.format.defaultFormatter.less": "none",
+"vetur.format.defaultFormatter.stylus": "none",
+"vetur.format.defaultFormatter.js": "none",
+"vetur.format.defaultFormatter.ts": "none"
+```
+
 1. 安装依赖包
 
 ```bash
@@ -491,7 +505,7 @@ npm i -D husky lint-staged
 
 ## 六、问题反馈
 
-如发现问题，欢迎提工单（issue）或者提合并请求（PR）。
+由于 react 脚手架`create-react-app` 和 vue 脚手架`vue-cli`的不断升级，在配置过程中可能会遇到一些问题，如有问题可以直接找我反馈，也欢迎提工单（issue）或者提合并请求（PR）。
 
 ## 七、主题插件推荐
 
