@@ -4,14 +4,14 @@
 
 ## 目录
 
-  - [一、下载安装 vscode 和插件](#一下载安装-vscode-和插件)
-  - [二、配置 vscode](#二配置-vscode)
-  - [三、配置 editorconfig](#三配置-editorconfig)
-  - [四、配置 prettier](#四配置-prettier)
-  - [五、项目配置](#五项目配置)
-  - [六、代码提交前自动格式化配置](#六代码提交前自动格式化配置)
-  - [七、问题反馈](#七问题反馈)
-  - [八、主题插件推荐](#八主题插件推荐)
+- [一、下载安装 vscode 和插件](#一下载安装-vscode-和插件)
+- [二、配置 vscode](#二配置-vscode)
+- [三、配置 editorconfig](#三配置-editorconfig)
+- [四、配置 prettier](#四配置-prettier)
+- [五、项目配置](#五项目配置)
+- [六、代码提交前自动格式化配置](#六代码提交前自动格式化配置)
+- [七、问题反馈](#七问题反馈)
+- [八、主题插件推荐](#八主题插件推荐)
 
 ## 一、下载安装 vscode 和插件
 
@@ -27,7 +27,7 @@
 
 给vscode添加以下配置项（Mac 位置：`code -> 首选项 -> 设置`，Windows 位置：欢迎补充）
 
-```json
+```js
 {
   // jsx单引号规则和taro规范保持一致，react默认是双引号。如果没有taro项目，可以不配置。
   "prettier.jsxSingleQuote": true,
@@ -105,7 +105,7 @@ npm i -D husky lint-staged
 
 修改`package.json`配置
 
-```json
+```js
 {
   // ...,
   "husky": {
