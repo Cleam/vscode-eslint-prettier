@@ -1,17 +1,19 @@
 # VsCode 开发环境配置规范
 
-一个前端团队开发规范的最佳实践。
+为了保证团队代码风格统一，请务必按照此配置规范进行配置。
 
 ## 目录
 
-- [一、下载安装 vscode 和插件](#一下载安装-vscode-和插件)
-- [二、配置 vscode](#二配置-vscode)
-- [三、配置 editorconfig](#三配置-editorconfig)
-- [四、配置 prettier](#四配置-prettier)
-- [五、项目配置](#五项目配置)
-- [六、代码提交前自动格式化配置](#六代码提交前自动格式化配置)
-- [七、问题反馈](#七问题反馈)
-- [八、主题插件推荐](#八主题插件推荐)
+- [VsCode 开发环境配置规范](#vscode-开发环境配置规范)
+  - [目录](#目录)
+  - [一、下载安装 vscode 和插件](#一下载安装-vscode-和插件)
+  - [二、配置 vscode](#二配置-vscode)
+  - [三、配置 editorconfig](#三配置-editorconfig)
+  - [四、配置 prettier](#四配置-prettier)
+  - [五、项目配置](#五项目配置)
+  - [六、代码提交前自动格式化配置](#六代码提交前自动格式化配置)
+  - [七、问题反馈](#七问题反馈)
+  - [八、主题插件推荐](#八主题插件推荐)
 
 ## 一、下载安装 vscode 和插件
 
@@ -25,9 +27,9 @@
 
 ## 二、配置 vscode
 
-给vscode添加以下配置项（Mac 位置：`code -> 首选项 -> 设置`，Windows 位置：欢迎补充）
+添加以下配置项（Mac 位置：`code -> 首选项 -> 设置 -> 用户设置`，Windows 位置：欢迎补充）
 
-```js
+```json
 {
   // jsx单引号规则和taro规范保持一致，react默认是双引号。如果没有taro项目，可以不配置。
   "prettier.jsxSingleQuote": true,
@@ -89,11 +91,13 @@ module.exports = {
 
 - eslint 配置
 
-按照[eslint-plugin-xmfe](https://www.npmjs.com/package/eslint-plugin-xmfe)的规则配置，有问题及时反馈。
+按照[eslint-plugin-xyz](https://www.npmjs.com/package/eslint-plugin-xyz)的规则配置。
 
 - .gitignore 配置
 
 项目根目录添加`.gitignore`文件，[点击查看内容](./.gitignore)
+
+**注意：** 推荐使用 vscode 插件[gi](https://marketplace.visualstudio.com/items?itemName=rubbersheep.gi)生成 gitignore 配置
 
 ## 六、代码提交前自动格式化配置
 
@@ -105,7 +109,7 @@ npm i -D husky lint-staged
 
 修改`package.json`配置
 
-```js
+```json
 {
   // ...,
   "husky": {
@@ -115,10 +119,7 @@ npm i -D husky lint-staged
   },
   "lint-staged": {
     "linters": {
-      "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-        "prettier --single-quote --semi --print-width 100 --tab-width 2 --write",
-        "git add"
-      ]
+      "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": ["eslint --ext .js,.jsx,.ts,.tsx,.vue src"]
     },
     "ignore": ["src/**/*.min.js"]
   }
