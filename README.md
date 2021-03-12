@@ -29,7 +29,7 @@
 
 添加以下配置项（Mac 位置：`code -> 首选项 -> 设置 -> 用户设置`，Windows 位置：欢迎补充）
 
-```json
+```js
 {
   // jsx单引号规则和taro规范保持一致，react默认是双引号。如果没有taro项目，可以不配置。
   "prettier.jsxSingleQuote": true,
@@ -109,7 +109,7 @@ npm i -D husky lint-staged
 
 修改`package.json`配置
 
-```json
+```js
 {
   // ...,
   "husky": {
